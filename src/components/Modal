@@ -1,0 +1,76 @@
+
+
+const dialogStyle = {
+  bottom: '0px',
+  top: '0px',
+  right: '0px',
+  left: '0px',
+  width: '100%',
+  height: '100%',
+  position: 'fixed',
+  zIndex: '99',
+  backgroundColor: 'rgb(0,0,0, 0.4)',
+  borderRadius: '10px',
+  minWidth: '40%'
+}
+
+const flexbox = {
+  display: 'flex', alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  height: '100%'
+}
+
+const modelContent = {
+  minWidth: 'fit-content',
+  border: '1px solid grey',
+  borderRadius: '10px',
+  margin: 'auto',
+  padding: '10px',
+  width: '40%',
+  height: '42vh',
+  backgroundColor: 'white',
+}
+const closeButton = {
+  width: '30px',
+  height: '30px',
+  border: '1px solid rgb(215, 215, 280)',
+  borderRadius: '50%',
+  backgroundColor: 'rgb(215, 215, 280)',
+  fontSize: 'x-large',
+  textDecoration: 'none',
+  hover: {
+    backgroundColor: "#ff0000",
+    color: "#ffffff"
+  }
+}
+
+
+
+const Modal =({toggleModal})=>{
+   
+    return (
+
+      <div className="dialogstyle" style={dialogStyle}>
+
+        <div className="flexbox" style={flexbox}>
+
+          <div className='modelcontant' style={modelContent}>
+
+            <div style={{ textAlign: 'right', paddingTop: '0px' }}>
+              <button onClick={toggleModal} style={closeButton} >X</button>
+            </div>
+
+            <p>HY</p>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    )
+  }
+
+export default Modal;
