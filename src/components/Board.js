@@ -52,7 +52,7 @@ function Board({ className, children, id, droppable }) {
 
   const drop = (e) => {
     e.preventDefault();
-    // console.log(e);
+
     if (droppable) {
       const card_id = e.dataTransfer.getData("card_id");
       const input_details = e.dataTransfer.getData("data");
@@ -61,7 +61,7 @@ function Board({ className, children, id, droppable }) {
 
       let arr = [...formData];
       arr.push(object);
-      // console.log(arr, "array")
+  
       setFormdata((prev) => arr, console.log(formData));
       console.log(formData);
       const card = document.getElementById(card_id);
@@ -100,9 +100,7 @@ function Board({ className, children, id, droppable }) {
         // </div>
         <>
           {showModal && (
-            <>
-              <Data data={formData} />
-            </>
+              <Data data={formData} />  
           )}
         </>
       )}
