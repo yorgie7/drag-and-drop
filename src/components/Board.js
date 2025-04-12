@@ -20,7 +20,7 @@ function getInput(el, i) {
       return  (
       <>
       <input type="radio" />
-      <label> {el.label}</label>
+      <label>{el.label}</label>
     </>
     )
     case "password":
